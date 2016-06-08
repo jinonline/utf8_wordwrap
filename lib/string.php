@@ -1,4 +1,8 @@
 <?php
+/*
+依照字串佔用的char size調整斷行位置
+*/
+
 function utf8_wordwrap($string, $length = 20, $break = "\n") {
     preg_match_all('~\p{Latin}+|\p{Han}+|\p{Hiragana}+|\p{Katakana}+|\p{Bopomofo}+|\p{Common}+~u', $string, $words);
     $new_words = array();
